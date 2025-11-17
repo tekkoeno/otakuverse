@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <script>
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const systemMode = localStorage.getItem('systemMode') === 'true';
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+          const theme = systemMode
+            ? prefersDark
+              ? 'dark'
+              : 'light'
+            : savedTheme || (prefersDark ? 'dark' : 'light');
+
+          // применяем без анимации и задержки
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="modal-theme">
+      <div class="modal-theme-content">
+        <svg class="modal-theme-close icon icon-close" width="20" height="20" aria-hidden="true">
+          <use href="./assets/img/icons.svg#icon-close"></use>
+        </svg>
+        <h2 class="modal-theme-title">Выберите какую тему вы хотите использовать</h2>
+        <div class="themes">
+          <div class="themes-item themes-night">
+            <img src="./assets/img/night-theme.svg" alt="theme" /> Ночная тема
+          </div>
+          <div class="themes-item themes-light">
+            <img src="./assets/img/light-theme.svg" alt="theme" /> Светлая тема
+          </div>
+          <div class="themes-item themes-system">
+            <img src="./assets/img/system-theme.svg" alt="theme" />
+            Как на устройстве
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-search">
+      <div class="modal-search-content">
+        <svg class="modal-search-close icon icon-close" width="20" height="20" aria-hidden="true">
+          <use href="./assets/img/icons.svg#icon-close"></use>
+        </svg>
+        <h2 class="modal-search-title">Поиск по названии или категории</h2>
+        <div class="modal-search-input">
+          <input class="modal-search-input" type="text" placeholder="Поиск..." />
+        </div>
+
+        <h4 class="modal-search-cats-title">Категории</h4>
+        <div class="modal-search-categories">
+          <div class="categories-item">
+            <span>Игры</span>
+          </div>
+          <div class="categories-item">
+            <span>Новости</span>
+          </div>
+          <div class="categories-item">
+            <span>Genshin Impact</span>
+          </div>
+          <div class="categories-item">
+            <span>Фильмы</span>
+          </div>
+          <div class="categories-item">
+            <span>Аниме</span>
+          </div>
+          <div class="categories-item">
+            <span>Сериалы</span>
+          </div>
+          <div class="categories-item">
+            <span>Игры</span>
+          </div>
+          <div class="categories-item">
+            <span>Новости</span>
+          </div>
+          <div class="categories-item">
+            <span>Genshin Impact</span>
+          </div>
+          <div class="categories-item">
+            <span>Фильмы</span>
+          </div>
+          <div class="categories-item">
+            <span>Аниме</span>
+          </div>
+          <div class="categories-item">
+            <span>Сериалы</span>
+          </div>
+          <div class="categories-item">
+            <span>Игры</span>
+          </div>
+          <div class="categories-item">
+            <span>Новости</span>
+          </div>
+          <div class="categories-item">
+            <span>Genshin Impact</span>
+          </div>
+          <div class="categories-item">
+            <span>Фильмы</span>
+          </div>
+          <div class="categories-item">
+            <span>Аниме</span>
+          </div>
+          <div class="categories-item">
+            <span>Сериалы</span>
+          </div>
+        </div>
+        <div class="search-posts-block">
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-news-tools">
+          <p class="content-news-show">
+            <svg class="icon double-arrow" width="12" height="12" aria-hidden="true">
+              <use href="./assets/img/icons.svg#double-arrow"></use>
+            </svg>
+            Показать еще
+          </p>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrap">
+          <a class="header__logo" href="#"><img src="./assets/img/logo.svg" alt="header-logo" /></a>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__list-item"><a class="header__list-link" href="#">Игры</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Новости</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Фильмы</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Аниме</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Гайды</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Дорамы</a></li>
+            </ul>
+          </nav>
+          <div class="header__btns">
+            <button class="header__tools button-theme">
+              <img src="./assets/img/night-theme.svg" alt="night-theme" />
+            </button>
+            <button class="header__tools button-search">
+              <img src="./assets/img/search.svg" alt="search" />
+            </button>
+            <button class="header__tools button-auth">
+              <img src="./assets/img/user.svg" alt="user" />
+            </button>
+          </div>
+          <button class="header__burger">
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+          </button>
+        </div>
+      </div>
+      <div class="header__mobile-menu">
+        <div class="header__btns">
+          <button class="header__tools button-theme">
+            <img src="./assets/img/night-theme.svg" alt="night-theme" />
+          </button>
+          <button class="header__tools button-search">
+            <img src="./assets/img/search.svg" alt="search" />
+          </button>
+          <button class="header__tools button-auth">
+            <img src="./assets/img/user.svg" alt="user" />
+          </button>
+        </div>
+        <ul class="header__list">
+          <li class="header__list-item"><a class="header__list-link" href="#">Игры</a></li>
+          <li class="header__list-item"><a class="header__list-link" href="#">Новости</a></li>
+          <li class="header__list-item"><a class="header__list-link" href="#">Фильмы</a></li>
+          <li class="header__list-item"><a class="header__list-link" href="#">Аниме</a></li>
+          <li class="header__list-item"><a class="header__list-link" href="#">Гайды</a></li>
+          <li class="header__list-item"><a class="header__list-link" href="#">Дорамы</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="categories">
+      <div class="container">
+        <div class="categories-wrap">
+          <div class="categories-navigation">
+            <p>Главная - <span>Новости</span></p>
+          </div>
+          <div class="categories-content">
+            <div class="categories-content-wrap">
+              <div class="main-slider-item categories-content-item">
+                <div class="main-slider-img categories-content__img">
+                  <img src="./assets/img/img-banner-duo-2.png" alt="img" />
+                </div>
+                <span class="main-slider-item-title categories-item-title"
+                  >Авторы PEAK анонсировали абсурдную кооперативную игру про вилочные погрузчики
+                  Crashout Crew</span
+                >
+                <div class="main-slider-info">
+                  <span class="main-slider-cat">Новости</span>
+                  <span class="main-slider-comment">24</span>
+                  <span class="main-slider-date">24.10.2025</span>
+                </div>
+              </div>
+              <div class="main-slider-item categories-content-item">
+                <div class="main-slider-img categories-content__img">
+                  <img src="./assets/img/img-banner-duo-2.png" alt="img" />
+                </div>
+                <span class="main-slider-item-title categories-item-title"
+                  >Авторы PEAK анонсировали абсурдную кооперативную игру про вилочные погрузчики
+                  Crashout Crew</span
+                >
+                <div class="main-slider-info">
+                  <span class="main-slider-cat">Новости</span>
+                  <span class="main-slider-comment">24</span>
+                  <span class="main-slider-date">24.10.2025</span>
+                </div>
+              </div>
+              <div class="main-slider-item categories-content-item">
+                <div class="main-slider-img categories-content__img">
+                  <img src="./assets/img/img-banner-duo-2.png" alt="img" />
+                </div>
+                <span class="main-slider-item-title categories-item-title"
+                  >Авторы PEAK анонсировали абсурдную кооперативную игру про вилочные погрузчики
+                  Crashout Crew</span
+                >
+                <div class="main-slider-info">
+                  <span class="main-slider-cat">Новости</span>
+                  <span class="main-slider-comment">24</span>
+                  <span class="main-slider-date">24.10.2025</span>
+                </div>
+              </div>
+              <div class="main-slider-item categories-content-item">
+                <div class="main-slider-img categories-content__img">
+                  <img src="./assets/img/img-banner-duo-2.png" alt="img" />
+                </div>
+                <span class="main-slider-item-title categories-item-title"
+                  >Авторы PEAK анонсировали абсурдную кооперативную игру про вилочные погрузчики
+                  Crashout Crew</span
+                >
+                <div class="main-slider-info">
+                  <span class="main-slider-cat">Новости</span>
+                  <span class="main-slider-comment">24</span>
+                  <span class="main-slider-date">24.10.2025</span>
+                </div>
+              </div>
+              <div class="main-slider-item categories-content-item">
+                <div class="main-slider-img categories-content__img">
+                  <img src="./assets/img/img-banner-duo-1.png" alt="img" />
+                </div>
+                <span class="main-slider-item-title categories-item-title"
+                  >Авторы PEAK анонсировали абсурдную кооперативную игру про вилочные погрузчики
+                  Crashout Crew</span
+                >
+                <div class="main-slider-info">
+                  <span class="main-slider-cat">Новости</span>
+                  <span class="main-slider-comment">24</span>
+                  <span class="main-slider-date">24.10.2025</span>
+                </div>
+              </div>
+              <div class="main-slider-item categories-content-item">
+                <div class="main-slider-img categories-content__img">
+                  <img src="./assets/img/img-banner-duo-2.png" alt="img" />
+                </div>
+                <span class="main-slider-item-title categories-item-title"
+                  >Авторы PEAK анонсировали абсурдную кооперативную игру про вилочные погрузчики
+                  Crashout Crew</span
+                >
+                <div class="main-slider-info">
+                  <span class="main-slider-cat">Новости</span>
+                  <span class="main-slider-comment">24</span>
+                  <span class="main-slider-date">24.10.2025</span>
+                </div>
+              </div>
+            </div>
+            <div class="categories_underline"></div>
+            <div class="categories-content-btn">
+              <button>Загрузить еще</button>
+            </div>
+          </div>
+          <div class="categories-commentary">
+            <h2 class="right-comments-head">Новые комментарии</h2>
+            <div class="content-right-comments-area"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__info">
+            <div class="footer__logo">
+              <img src="./assets/img/logo.svg" alt="logo" />
+            </div>
+            <p>Узнайте что-то интересное про вашу любимую игру</p>
+            <p>otakuverse.com © 2025</p>
+            <img class="age-footer" src="./assets/img/age-footer.svg" alt="age" />
+            <div class="underline"></div>
+            <div class="footer__socials">
+              <img src="./assets/img/telegram-icon.svg" alt="tel" />
+              <img src="./assets/img/vk-icon.svg" alt="tel" />
+              <img src="./assets/img/yt-icon.svg" alt="tel" />
+            </div>
+          </div>
+          <div class="footer__nav">
+            <div class="footer__nav-item">
+              <h4 class="footer__nav-title">Игры</h4>
+              <ul class="footer__nav-list">
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+              </ul>
+            </div>
+            <div class="footer__nav-item">
+              <h4 class="footer__nav-title">Игры</h4>
+              <ul class="footer__nav-list">
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+              </ul>
+            </div>
+            <div class="footer__nav-item">
+              <h4 class="footer__nav-title">Игры</h4>
+              <ul class="footer__nav-list">
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+              </ul>
+            </div>
+            <div class="footer__nav-item">
+              <h4 class="footer__nav-title">Игры</h4>
+              <ul class="footer__nav-list">
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

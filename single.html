@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <script>
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const systemMode = localStorage.getItem('systemMode') === 'true';
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+          const theme = systemMode
+            ? prefersDark
+              ? 'dark'
+              : 'light'
+            : savedTheme || (prefersDark ? 'dark' : 'light');
+
+          // применяем без анимации и задержки
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="modal-theme">
+      <div class="modal-theme-content">
+        <svg class="modal-theme-close icon icon-close" width="20" height="20" aria-hidden="true">
+          <use href="./assets/img/icons.svg#icon-close"></use>
+        </svg>
+        <h2 class="modal-theme-title">Выберите какую тему вы хотите использовать</h2>
+        <div class="themes">
+          <div class="themes-item themes-night">
+            <img src="./assets/img/night-theme.svg" alt="theme" /> Ночная тема
+          </div>
+          <div class="themes-item themes-light">
+            <img src="./assets/img/light-theme.svg" alt="theme" /> Светлая тема
+          </div>
+          <div class="themes-item themes-system">
+            <img src="./assets/img/system-theme.svg" alt="theme" />
+            Как на устройстве<span>(...)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-search">
+      <div class="modal-search-content">
+        <svg class="modal-search-close icon icon-close" width="20" height="20" aria-hidden="true">
+          <use href="./assets/img/icons.svg#icon-close"></use>
+        </svg>
+        <h2 class="modal-search-title">Поиск по названии или категории</h2>
+        <div class="modal-search-input">
+          <input class="modal-search-input" type="text" placeholder="Поиск..." />
+        </div>
+
+        <h4 class="modal-search-cats-title">Категории</h4>
+        <div class="modal-search-categories">
+          <div class="categories-item">
+            <span>Игры</span>
+          </div>
+          <div class="categories-item">
+            <span>Новости</span>
+          </div>
+          <div class="categories-item">
+            <span>Genshin Impact</span>
+          </div>
+          <div class="categories-item">
+            <span>Фильмы</span>
+          </div>
+          <div class="categories-item">
+            <span>Аниме</span>
+          </div>
+          <div class="categories-item">
+            <span>Сериалы</span>
+          </div>
+          <div class="categories-item">
+            <span>Игры</span>
+          </div>
+          <div class="categories-item">
+            <span>Новости</span>
+          </div>
+          <div class="categories-item">
+            <span>Genshin Impact</span>
+          </div>
+          <div class="categories-item">
+            <span>Фильмы</span>
+          </div>
+          <div class="categories-item">
+            <span>Аниме</span>
+          </div>
+          <div class="categories-item">
+            <span>Сериалы</span>
+          </div>
+          <div class="categories-item">
+            <span>Игры</span>
+          </div>
+          <div class="categories-item">
+            <span>Новости</span>
+          </div>
+          <div class="categories-item">
+            <span>Genshin Impact</span>
+          </div>
+          <div class="categories-item">
+            <span>Фильмы</span>
+          </div>
+          <div class="categories-item">
+            <span>Аниме</span>
+          </div>
+          <div class="categories-item">
+            <span>Сериалы</span>
+          </div>
+        </div>
+        <div class="search-posts-block">
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="content-posts-item">
+            <div class="content-post-item-img content-post-search-item-img">
+              <img src="./assets/img/content-post-img.png" alt="contnet-post" />
+            </div>
+
+            <div class="content-posts-item-info">
+              <span class="post-tag">Игры</span>
+              <span class="post-title">
+                Что будет если главный персонаж игры Silent Hill F умрет после первой катсцены?
+                Инсайдеры рассказали шокирующую новость о прошлом где было
+              </span>
+              <div class="post-info">
+                <p class="post-info-time">
+                  <svg class="icon icon-clock" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-clock"></use>
+                  </svg>
+                  15 часов назад
+                </p>
+                <p class="post-info-comment">
+                  <svg class="icon icon-message" width="12" height="12" aria-hidden="true">
+                    <use href="./assets/img/icons.svg#icon-message"></use>
+                  </svg>
+                  14
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content-news-tools">
+          <p class="content-news-show">
+            <svg class="icon double-arrow" width="12" height="12" aria-hidden="true">
+              <use href="./assets/img/icons.svg#double-arrow"></use>
+            </svg>
+            Показать еще
+          </p>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrap">
+          <a class="header__logo" href="#"><img src="./assets/img/logo.svg" alt="header-logo" /></a>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__list-item"><a class="header__list-link" href="#">Игры</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Новости</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Фильмы</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Аниме</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Гайды</a></li>
+              <li class="header__list-item"><a class="header__list-link" href="#">Дорамы</a></li>
+            </ul>
+          </nav>
+          <div class="header__btns">
+            <button class="header__tools button-theme">
+              <img src="./assets/img/night-theme.svg" alt="night-theme" />
+            </button>
+            <button class="header__tools button-search">
+              <img src="./assets/img/search.svg" alt="search" />
+            </button>
+            <button class="header__tools button-auth">
+              <img src="./assets/img/user.svg" alt="user" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="categories single">
+      <div class="container">
+        <articles class="categories-wrap">
+          <div class="categories-navigation single-navigation">
+            <p>Главная - <span>Новости</span></p>
+          </div>
+          <div class="single-wrap">
+            <div class="single-info">
+              <span class="single-info-date">
+                <svg class="icon icon-calendar" width="18" height="18" aria-hidden="true">
+                  <use href="./assets/img/icons.svg#icon-calendar"></use>
+                </svg>
+                Дата публикации: 24.10.25
+              </span>
+              <span class="single-info-time">
+                <svg class="icon icon-eye" width="18" height="18" aria-hidden="true">
+                  <use href="./assets/img/icons.svg#icon-eye"></use>
+                </svg>
+                Время прочтения: 1 мин
+              </span>
+            </div>
+            <div class="single-banner">
+              <div class="single-banner-img">
+                <img src="./assets/img/img-banner-duo-1.png" alt="banner-img" />
+              </div>
+              <h1 class="single-banner-title">
+                Авторы PEAK анонсировали абсурдную кооперативную игру про вилочные погрузчики
+                Crashout Crew
+              </h1>
+            </div>
+            <div class="single-content">
+              <img src="./assets/img/test-img.png" alt="img" />
+              <p>
+                I'm Not Human — это необычная инди-игра, в которой граница между человеком и машиной
+                стирается до неузнаваемости. Здесь нет привычных героев или злодеев — только
+                холодный мир, где эмоции считаются ошибкой, а логика стала новой религией. Игрок
+                оказывается в теле существа, которое не знает, кто оно на самом деле. Ты
+                просыпаешься в разрушенном городе, где прошлое стёрто, а будущее пугающе бездушно.
+                Каждый твой шаг — попытка доказать себе и окружающим, что ты всё ещё способен
+                чувствовать. Но чем дальше ты идёшь, тем сильнее игра заставляет задуматься: а не
+                имитируешь ли ты человечность?
+              </p>
+              <h2>Сюжет и атмосфера</h2>
+              <p>
+                Сюжет Im Not Human разворачивается в постапокалиптическом будущем, где человечество
+                почти исчезло. Вместо людей остались синтетические копии — идеальные машины,
+                созданные для поддержания порядка. Главный герой, по имени Нэйт, просыпается в
+                лаборатории с фрагментами воспоминаний. Он помнит лица, голоса, ощущения — но не
+                знает, принадлежат ли они ему. В течение игры ты исследуешь заброшенные районы,
+                города-призраки и цифровые архивы, где хранятся следы человеческой цивилизации. Чем
+                больше информации находишь, тем запутаннее становится правда. Ты ли человек,
+                пытающийся вспомнить своё прошлое, или синтетик, который просто верит, что когда-то
+                был живым?
+              </p>
+              <img src="./assets/img/single-content-img.png" alt="img" />
+              <h3>Основные темы и философия игры</h3>
+              <ul>
+                <li>Поиск собственной идентичности и смысла существования</li>
+                <li>Поиск собственной идентичности и смысла существования</li>
+                <li>Поиск собственной идентичности и смысла существования</li>
+                <li>Поиск собственной идентичности и смысла существования</li>
+              </ul>
+              <p>
+                Игра поднимает философские вопросы о природе человека. Что делает нас людьми — тело,
+                память, способность любить или осознавать боль? В I’m Not Human каждый выбор
+                отражает твои внутренние убеждения. Если ты проявляешь сострадание, ты сохраняешь
+                остатки человечности. Если действуешь хладнокровно — теряешь её, но выживаешь
+                дольше.Создатели вдохновлялись Blade Runner, Ex Machina и Detroit: Become Human,
+                однако пошли дальше, добавив элементы психологического ужаса. Здесь не просто задают
+                вопросы — заставляют тебя искать на них ответы внутри себя.
+              </p>
+              <h2>Геймплей и механики</h2>
+              <p>
+                Геймплей I’m Not Human сочетает элементы интерактивной драмы, логических задач и
+                исследования мира. Игрок перемещается по нелинейным локациям, общается с
+                персонажами, собирает фрагменты памяти и принимает решения, влияющие на психическое
+                состояние героя.Каждая сцена сопровождается визуальными сбоями, отражающими
+                внутренний конфликт. Когда Нэйт теряет связь с эмоциями, экран покрывается цифровыми
+                искажениями. Когда герой вспоминает прошлое — появляются яркие вспышки и звуки
+                сердца. Это создаёт невероятно глубокий эффект присутствия, будто ты и сам теряешь
+                человеческий облик.
+              </p>
+              <ul>
+                <li>
+                  Проверьте изображение на компьютере
+                  <img src="/assets/img/img-banner-duo-1.png" alt="img" />
+                </li>
+              </ul>
+              <div class="content-duo">
+                <img src="./assets/img/img-banner-duo-1.png" alt="img" />
+                <img src="./assets/img/img-banner-duo-2.png" alt="img" />
+              </div>
+              <ol>
+                <li>Поиск собственной идентичности и смысла существования</li>
+                <li>Поиск собственной идентичности и смысла существования</li>
+                <li>Поиск собственной идентичности и смысла существования</li>
+                <li>Поиск собственной идентичности и смысла существования</li>
+              </ol>
+            </div>
+            <div class="single-recomendations">
+              <h2 class="single-recomendations-title">Читайте также</h2>
+              <div class="single-recomendations-wrap">
+                <div class="single-recomendations-item">
+                  <div class="single-recomendations-img">
+                    <img src="/assets/img/img-banner-duo-1.png" alt="" />
+                  </div>
+                  <div class="single-recomendations-item-info">
+                    <h3 class="single-recomendations-item-title">
+                      Секреты, пасхалки, гайды по игре I'm not a Human 2. Что будет если впустить
+                      гостя и не убивать его? Секреты, пасхалки, гайды по игре I'm not a Human 2.
+                      Что будет если впустить гостя и не убивать его?
+                    </h3>
+                    <p class="single-recomendations-date">17.10.2025</p>
+                    <div class="single-recomendations-nav">
+                      <p class="single-recomendations-cat">Игры</p>
+                      <p class="single-recomendations-all">
+                        <svg
+                          class="icon icon-long-arrow-left"
+                          width="21"
+                          height="9"
+                          aria-hidden="true"
+                        >
+                          <use href="./assets/img/icons.svg#icon-long-arrow-left"></use>
+                        </svg>
+                        Все игры
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="single-recomendations-item">
+                  <div class="single-recomendations-img">
+                    <img src="/assets/img/img-banner-duo-1.png" alt="" />
+                  </div>
+                  <div class="single-recomendations-item-info">
+                    <h3 class="single-recomendations-item-title">
+                      Секреты, пасхалки, гайды по игре I'm not a Human 2. Что будет если впустить
+                      гостя и не убивать его? Секреты, пасхалки, гайды по игре I'm not a Human 2.
+                      Что будет если впустить гостя и не убивать его?
+                    </h3>
+                    <p class="single-recomendations-date">17.10.2025</p>
+                    <div class="single-recomendations-nav">
+                      <p class="single-recomendations-cat">Игры</p>
+                      <p class="single-recomendations-all">
+                        <svg
+                          class="icon icon-long-arrow-left"
+                          width="21"
+                          height="9"
+                          aria-hidden="true"
+                        >
+                          <use href="./assets/img/icons.svg#icon-long-arrow-left"></use>
+                        </svg>
+                        Все игры
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="single-recomendations-item">
+                  <div class="single-recomendations-img">
+                    <img src="/assets/img/img-banner-duo-1.png" alt="" />
+                  </div>
+                  <div class="single-recomendations-item-info">
+                    <h3 class="single-recomendations-item-title">
+                      Секреты, пасхалки, гайды по игре I'm not a Human 2. Что будет если впустить
+                      гостя и не убивать его? Секреты, пасхалки, гайды по игре I'm not a Human 2.
+                      Что будет если впустить гостя и не убивать его?
+                    </h3>
+                    <p class="single-recomendations-date">17.10.2025</p>
+                    <div class="single-recomendations-nav">
+                      <p class="single-recomendations-cat">Игры</p>
+                      <p class="single-recomendations-all">
+                        <svg
+                          class="icon icon-long-arrow-left"
+                          width="21"
+                          height="9"
+                          aria-hidden="true"
+                        >
+                          <use href="./assets/img/icons.svg#icon-long-arrow-left"></use>
+                        </svg>
+                        Все игры
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="categories-commentary">
+            <h2 class="right-comments-head">Новые комментарии</h2>
+            <div class="content-right-comments-area"></div>
+          </div>
+        </articles>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrap">
+          <div class="footer__info">
+            <div class="footer__logo">
+              <img src="./assets/img/logo.svg" alt="logo" />
+            </div>
+            <p>Узнайте что-то интересное про вашу любимую игру</p>
+            <p>otakuverse.com © 2025</p>
+            <img class="age-footer" src="./assets/img/age-footer.svg" alt="age" />
+            <div class="underline"></div>
+            <div class="footer__socials">
+              <img src="./assets/img/telegram-icon.svg" alt="tel" />
+              <img src="./assets/img/vk-icon.svg" alt="tel" />
+              <img src="./assets/img/yt-icon.svg" alt="tel" />
+            </div>
+          </div>
+          <div class="footer__nav">
+            <div class="footer__nav-item">
+              <h4 class="footer__nav-title">Игры</h4>
+              <ul class="footer__nav-list">
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+              </ul>
+            </div>
+            <div class="footer__nav-item">
+              <h4 class="footer__nav-title">Игры</h4>
+              <ul class="footer__nav-list">
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+              </ul>
+            </div>
+            <div class="footer__nav-item">
+              <h4 class="footer__nav-title">Игры</h4>
+              <ul class="footer__nav-list">
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+              </ul>
+            </div>
+            <div class="footer__nav-item">
+              <h4 class="footer__nav-title">Игры</h4>
+              <ul class="footer__nav-list">
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+                <li>Apex Legends</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
