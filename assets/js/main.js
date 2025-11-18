@@ -107,7 +107,21 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.style.overflow = '';
     }
   });
+  const swiper = new Swiper('.swiper', {
+    // Опциональные параметры
+    loop: true,
 
+    // Пагинация
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Навигация (стрелки)
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
   /* Функционал поисков статьи */
   // Функционал модального окна поиска статьи
   // Теперь ищем ВСЕ кнопки поиска
